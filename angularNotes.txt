@@ -1,0 +1,23 @@
+Angular :-
+-	Angular is a MVC style JavaScript Framework for creating Single Page Application (SPA) in the projects.
+-	Angular is a JavaScript Framework which allows you to create reactive Single Page Applications (SPAs).
+-	Additional content brought into the web page without refresh.
+
+
+TypeScript :-
+-	Superset of JavaScript.
+-	that it compiles into pure JavaScript in the end.
+-	it provides ‘strong typing’ (that’s where the name comes from). 
+-	This means that we can (and should) assign types to our variables and class members. 
+-	These types won’t compile to JavaScript (as JS does not know types) but we will get compilation errors if we assign wrong
+types or make any other type-related errors.
+-	offer more features like Types, Classes, Interface etc.
+-	for run typescript(.ts) file -> tsc fileName
+-	at the time of running ts file it will convert into js file 
+
+
+For download angular : npm install -g @angular/cli
+For creating new project : ng new project-name
+run it : ng serve
+default port : 4200
+add new module : npm install --save bootstrap@3   here @3 means version 3
