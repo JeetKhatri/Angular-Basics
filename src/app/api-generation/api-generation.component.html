@@ -1,0 +1,12 @@
+<p>API generation form</p>
+Student Name <input type="text" class="form-control" [(ngModel)]="studentName">
+Favourite Game<select [(ngModel)]="favSport" class="form-control" >
+    <option value=""></option>
+    <option value="cricket">cricket</option>
+    <option value="hocky">hocky</option>
+    <option value="football">football</option>
+    <option value="volleyball">volleyball</option>
+  </select>
+
+<br>
+<p>{{isValidAPI()}}    -->   {{ '{' }} id:1, studentName:{{studentName}}, favSport:{{favSport}} {{'}'}}</p>
