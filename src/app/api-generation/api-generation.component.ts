@@ -23,7 +23,7 @@ export class ApiGenerationComponent implements OnInit {
   }
   addAPI(){
       if (this.studentName!="" && this.favSport!="" && this.favSport!="nothing") {
-        this.apiList.push("{ id:"+this.apiList.length+", studentName:"+this.studentName+", favSport:"+this.favSport+" }");
+        this.apiList.push("{ id:"+(this.apiList.length+1)+", studentName:"+this.studentName+", favSport:"+this.favSport+" }");
       }
   }
 }
