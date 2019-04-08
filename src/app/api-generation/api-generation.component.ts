@@ -10,14 +10,20 @@ export class ApiGenerationComponent implements OnInit {
   studentName="";
   favSport="";
   constructor() { }
-  apiValidation="invalid api";
+  apiValidation=false;
+  apiList=[];
   ngOnInit() {
   }
-  isValidAPI(){
+  isValidAPIMethod(){
     if (this.studentName=="" || this.favSport=="" || this.favSport=="nothing") {
-      return this.apiValidation="invalid api";
+      return this.apiValidation=false;
     } else {
-      return this.apiValidation="valid api";
+      return this.apiValidation=true;
     }
+  }
+  addAPI(){
+      if (this.studentName!="" && this.favSport!="" && this.favSport!="nothing") {
+        this.apiList.push("{ id:"+this.apiList.length+", studentName:"+this.studentName+", favSport:"+this.favSport+" }");
+      }
   }
 }

@@ -1,0 +1,8 @@
+.validAPI{
+    background-color: green;
+    color: white;
+}
+.inValidAPI{
+    background-color: red;
+    color: white;
+}

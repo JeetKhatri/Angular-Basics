@@ -1,3 +1,4 @@
+<hr>
 <p>API generation form</p>
 Student Name <input type="text" class="form-control" [(ngModel)]="studentName">
 Favourite Game<select [(ngModel)]="favSport" class="form-control" >
@@ -7,9 +8,11 @@ Favourite Game<select [(ngModel)]="favSport" class="form-control" >
     <option value="football">football</option>
     <option value="volleyball">volleyball</option>
   </select>
+<p *ngIf="isValidAPIMethod(); else invalidAPI" [ngClass]="{validAPI: true}">{{isValidAPIMethod()?'Valid API': 'Invalid API'}}    -->   {{ '{' }} id:1, studentName:{{studentName}}, favSport:{{favSport}} {{'}'}}</p>
+<ng-template #invalidAPI>
+  <p [ngClass]="{inValidAPI: true}">{{isValidAPIMethod()?'Valid API': 'Invalid API'}}    -->   {{ '{' }} id:1, studentName:{{studentName}}, favSport:{{favSport}} {{'}'}}</p>
+</ng-template>
 
+<button class="btn btn-primary" [disabled]="!isValidAPIMethod()" (click)="addAPI()">Add API</button>
 <br>
-<p>{{isValidAPI()}}    -->   {{ '{' }} id:1, studentName:{{studentName}}, favSport:{{favSport}} {{'}'}}</p>
-
-<!-- For future, validation and add more api in it using ngFor after submit form -->
-<!-- ref: https://phpenthusiast.com/blog/angular-form-ngform-and-two-ways-data-binding -->
+<li *ngFor="let api of apiList" [ngClass]="{validAPI: true}">{{api}}</li>
